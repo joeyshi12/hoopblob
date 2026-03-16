@@ -16,7 +16,7 @@ namespace hb
     constexpr bn::fixed BALL_WALL_BOUNCE = bn::fixed(-0.8);
     constexpr bn::fixed HIT_FORCE_X = bn::fixed(2.5);
     constexpr bn::fixed HIT_FORCE_Y = bn::fixed(-3.0);
-    constexpr int WIN_SCORE = 10;
+    constexpr int WIN_SCORE = 5;
     constexpr bn::fixed LEFT_HOOP_X = -100;
     constexpr bn::fixed RIGHT_HOOP_X = 100;
     constexpr bn::fixed HOOP_RIM_Y = -15;

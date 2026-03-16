@@ -2,7 +2,7 @@
 
 A GBA basketball game built with the [Butano](https://github.com/GValiente/butano) engine.
 
-Two semicircle-shaped blobs face off on a side-view court, bumping a bouncing ball into each other's hoops. You play on the left against an AI opponent on the right. First to 10 points wins.
+Two semicircle-shaped blobs face off on a side-view court, bumping a bouncing ball into each other's hoops. You play on the left against an AI opponent on the right. First to 5 points wins.
 
 ![Game preview](assets/preview.webp)
 
