@@ -1,0 +1,15 @@
+# Butano Build artifacts
+*.gba
+*.elf
+*.sav
+build/
+
+# Ignore the butano folder
+butano/
+
+# Editor/OS junk
+.DS_Store
+Thumbs.db
+.vscode/
+.nvim/
+compile_commands.json
