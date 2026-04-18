@@ -2,18 +2,24 @@
 
 A GBA basketball game built with the [Butano](https://github.com/GValiente/butano) engine.
 
-Two semicircle-shaped blobs face off on a side-view court, bumping a bouncing ball into each other's hoops. You play on the left against an AI opponent on the right. First to 5 points wins.
+Two Kirby-inspired blobs face off on a side-view court, bumping a bouncing ball into each other's hoops. You play on the left against an AI opponent on the right. Matches are time-based — score more than your opponent before the clock runs out.
 
-![Game preview](assets/preview.webp)
+## Gameplay
+
+- 90-second match clock with a consolidated scoreboard (your score, time, opponent score) shown on a plaque at the top of the court.
+- Sudden-death overtime on ties — first point wins.
+- **Charge jump**: hold A on the ground to charge up, release to jump. The longer you hold (up to ~25 frames), the higher the blob jumps and the harder the ball flies off the blob on contact.
+- A quick tap of A is intentionally too weak to score — you have to charge if you want a real shot on the hoop.
+- Blobs visibly crouch as they charge a jump, so you can read both your own and the AI's wind-up.
 
 ## Controls
 
-- D-pad left/right — Move
-- A — Jump
+- D-pad left/right — Move (facing is held when no direction is pressed)
+- A — Hold to charge, release to jump
+- Start — Pause (opens a pause menu with Resume / Quit)
 - D-pad up/down — Navigate menus
 - A — Select menu option
 - B — Back (credits screen)
-- Start — Return to menu (game over screen)
 
 ## Building
 
@@ -32,5 +38,3 @@ export PATH=$DEVKITPRO/tools/bin:$DEVKITARM/bin:$PATH
 # Build
 make -j$(nproc)
 ```
-
-This produces `hoopblob.gba` in the project root. Run it with any GBA emulator (e.g. [mGBA](https://mgba.io/)).

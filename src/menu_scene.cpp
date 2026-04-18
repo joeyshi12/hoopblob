@@ -3,6 +3,9 @@
 #include "bn_keypad.h"
 #include "bn_vector.h"
 #include "bn_sprite_ptr.h"
+#include "bn_regular_bg_ptr.h"
+#include "bn_sound_items.h"
+#include "bn_regular_bg_items_menu_bg.h"
 
 namespace hb
 {
@@ -22,6 +25,7 @@ namespace
 
 SceneType run_menu(bn::sprite_text_generator& text_gen)
 {
+    bn::regular_bg_ptr bg = bn::regular_bg_items::menu_bg.create_bg(0, 0);
     bn::vector<bn::sprite_ptr, 32> sprites;
     int cursor = 0;
     draw_menu(text_gen, sprites, cursor);
@@ -41,6 +45,7 @@ SceneType run_menu(bn::sprite_text_generator& text_gen)
 
         if(bn::keypad::a_pressed())
         {
+            bn::sound_items::sfx_menu_select.play();
             return cursor == 0 ? SceneType::GAME : SceneType::CREDITS;
         }
 
