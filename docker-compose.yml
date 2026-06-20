@@ -4,7 +4,7 @@ services:
     volumes:
       - .:/game
       - build_cache:/game/build
-    command: ["bash", "-c", "make -j$(nproc) LIBBUTANO=/opt/butano PYTHON=python3"]
+    command: ["bash", "-c", "make -j$(nproc) LIBBUTANO=/opt/butano/butano PYTHON=python3"]
 
 volumes:
   build_cache:

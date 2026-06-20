@@ -1,5 +1,7 @@
 # Hoopblob
 
+[![Build and Release](https://github.com/joeyshi12/hoopblob/actions/workflows/build.yml/badge.svg)](https://github.com/joeyshi12/hoopblob/actions/workflows/build.yml)
+
 A GBA basketball game built with the [Butano](https://github.com/GValiente/butano) engine.
 
 Two Kirby-inspired blobs face off on a side-view court, bumping a bouncing ball into each other's hoops. You play on the left against an AI opponent on the right. Matches are time-based — score more than your opponent before the clock runs out.
