@@ -336,11 +336,9 @@ void run_game(bn::sprite_text_generator& text_gen, bn::random& rng)
 
         // Scoring — ball must pass through the rim
         bool scored = false;
-        bool player_scored_point = false;
         if(ball.scored_in_hoop(RIGHT_HOOP_X))
         {
             player_score++;
-            player_scored_point = true;
             scored = true;
         }
         else if(ball.scored_in_hoop(LEFT_HOOP_X))
@@ -368,18 +366,6 @@ void run_game(bn::sprite_text_generator& text_gen, bn::random& rng)
                 run_game_over(text_gen, player_score, opponent_score);
                 return;
             }
-
-            // Reset positions — scored-on side gets possession
-            player.reset_position();
-            opponent.reset_position();
-            ball.reset(!player_scored_point); // give ball to the team that was scored on
-            player_was_overlapping = false;
-            opponent_was_overlapping = false;
-            player_hit_cooldown = 0;
-            opponent_hit_cooldown = 0;
-            sync_sprites(player, opponent, ball, player_spr, opponent_spr, ball_spr);
-            reset_blob_sprite(player_spr, false);
-            reset_blob_sprite(opponent_spr, true);
         }
 
         sync_sprites(player, opponent, ball, player_spr, opponent_spr, ball_spr);
