@@ -13,3 +13,7 @@ Thumbs.db
 .vscode/
 .nvim/
 compile_commands.json
+
+# Test build artifacts
+test/hoopblob_tests
+test/build/
