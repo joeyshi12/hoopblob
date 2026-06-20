@@ -1,6 +1,7 @@
 # Hoopblob
 
 [![Build and Release](https://github.com/joeyshi12/hoopblob/actions/workflows/build.yml/badge.svg)](https://github.com/joeyshi12/hoopblob/actions/workflows/build.yml)
+[![Tests](https://github.com/joeyshi12/hoopblob/actions/workflows/test.yml/badge.svg)](https://github.com/joeyshi12/hoopblob/actions/workflows/test.yml)
 
 A GBA basketball game built with the [Butano](https://github.com/GValiente/butano) engine.
 
