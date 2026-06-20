@@ -4,8 +4,8 @@
 *.sav
 build/
 
-# Ignore the butano folder
-butano/
+# Ignore the top-level butano library clone (not test/butano shim)
+/butano/
 
 # Editor/OS junk
 .DS_Store
