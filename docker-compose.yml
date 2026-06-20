@@ -2,8 +2,8 @@ services:
   build:
     build: .
     volumes:
-      - .:/game
-      - build_cache:/game/build
+      - .:/hoopblob
+      - build_cache:/hoopblob/build
     command: ["bash", "-c", "make -j$(nproc) LIBBUTANO=/opt/butano/butano PYTHON=python3"]
 
 volumes:
