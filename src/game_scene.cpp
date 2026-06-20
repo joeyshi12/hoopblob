@@ -380,8 +380,6 @@ void run_game(bn::sprite_text_generator& text_gen, bn::random& rng)
             sync_sprites(player, opponent, ball, player_spr, opponent_spr, ball_spr);
             reset_blob_sprite(player_spr, false);
             reset_blob_sprite(opponent_spr, true);
-
-            run_countdown(text_gen);
         }
 
         sync_sprites(player, opponent, ball, player_spr, opponent_spr, ball_spr);

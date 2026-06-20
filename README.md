@@ -23,6 +23,16 @@ Two Kirby-inspired blobs face off on a side-view court, bumping a bouncing ball 
 
 ## Building
 
+### Docker
+
+Requires only [Docker](https://www.docker.com/products/docker-desktop/).
+
+```bash
+./build.sh
+```
+
+### Native
+
 Requires [devkitPro](https://devkitpro.org/wiki/Getting_Started) with the GBA development tools.
 
 ```bash

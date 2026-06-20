@@ -1,0 +1,34 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:20260610
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: apt-get update && apt-get install -y --no-install-recommends python3 git
+
+      - name: Clone Butano
+        run: git clone --depth 1 --branch 21.7.0 https://github.com/GValiente/butano.git butano
+
+      - name: Build
+        run: make -j$(nproc) PYTHON=python3
+
+      - name: Upload ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: hoopblob-rom
+          path: "*.gba"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "*.gba"
